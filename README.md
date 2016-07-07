@@ -1,3 +1,15 @@
+## py-faster-rcnn fork modified to train/test with custom dataset
+
+- *lib/datasets/customdb.py* : custom dataset class inherit imdb base class
+- prepare custom dataset in *data/custom/xxx/*, provide images and labels as specied in *customdb.py*, *train.txt* and *test.txt* sets are also required
+- copy/modify *solver.prototxt*/*train.prototxt*/*test.prototxt*, basically change 21 with (num_classes + 1) and 84 with (num_classes + 1) * 4. (pascal_voc has 20 classes)
+- *experiments/scripts/faster_rcnn_end2end.sh* : modified to train in end2end favor for specifed custom dataset
+- *tools/demo_custom.py* : used to demo or test trained network
+
+Detailed process underway...
+
+
+
 ### Disclaimer
 
 The official Faster R-CNN code (written in MATLAB) is available [here](https://github.com/ShaoqingRen/faster_rcnn).

@@ -38,6 +38,12 @@ case $DATASET in
     PT_DIR="coco"
     ITERS=490000
     ;;
+  custom)
+    TRAIN_IMDB="custom_qiaqia_train"
+    TEST_IMDB="custom_qiaqia_test"
+    PT_DIR="custom"
+    ITERS=50000
+  ;;
   *)
     echo "No dataset given"
     exit
